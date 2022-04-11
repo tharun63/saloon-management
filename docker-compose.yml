@@ -1,0 +1,49 @@
+version: "3"
+services:
+  mongodb:
+    image: mongo:4.0
+    restart: always
+    ports:
+      - "27019:27017"
+    volumes:
+      - /data/sample/mongodb/data/db:/data/db
+  dev-app:
+    build: .
+    image: saloon-management-domain-apis:latest
+    container_name: saloon-management-domain-apis
+    restart: always
+    ports:
+      - "3009:3009"
+    volumes:
+       - ./dist:/app/dist
+       - ./reports:/app/reports
+       - ./coverage:/app/coverage
+       - ./src:/app/src
+    depends_on:
+      - mongodb
+    stdin_open: true
+    tty: true
+
+  test-app:
+    build: .
+    image:  saloon-management-domain-apis:latest
+    container_name: saloon-management-domain-apis
+    restart: always
+    volumes:
+        - ./dist:/app/dist
+        - ./reports:/app/reports
+        - ./coverage:/app/coverage
+        - ./src:/app/src
+        - ./test:/app/test
+    depends_on:
+        - mongodb
+    links:
+        - mongodb
+    stdin_open: true
+    tty: true
+    environment:
+        activeProfile: test
+        API_BASE: /api/v1/saloon-management
+    
+     
+  

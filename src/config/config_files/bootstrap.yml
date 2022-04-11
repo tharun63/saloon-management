@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      enabled: true
+      label: master
+      name: sample-domain-config-server

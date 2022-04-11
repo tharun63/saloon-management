@@ -1,0 +1,52 @@
+{
+  "name": "survey_service_apis",
+  "version": "1.0.0",
+  "description": "Chase Survey Service APIS",
+  "main": "src/server.js",
+  "scripts": {
+    "code_coverage": "cross-env NODE_ENV=test nyc --reporter=html mocha --recursive --exit",
+    "code_quality": "plato -r -d reports/plato ./src",
+    "start-dev": "nodemon --exec babel-node ./src/bin/www",
+    "build": "babel ./src --out-dir dist",
+    "start-prod": "node ./dist/bin/www"
+  },
+  "author": "wavelabs",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "express": "4.16.3",
+    "jwt-decode": "2.2.0",
+    "mongoose": "^5.5.2",
+    "morgan": "^1.9.1",
+    "request": "2.88.2",
+    "spring-cloud-config": "4.6.6",
+    "swagger-jsdoc": "^3.2.9",
+    "swagger-ui-express": "3.0.10",
+    "underscore": "1.9.1"
+    
+  },
+  "devDependencies": {
+    "@babel/cli": "7.4.3",
+    "@babel/core": "7.4.3",
+    "@babel/node": "7.2.2",
+    "@babel/preset-env": "7.4.3",
+    "@babel/register": "^7.4.0",
+    "babel-plugin-istanbul": "^5.1.2",
+    "cross-env": "^5.2.0",
+    "nodemon": "1.18.11",
+    "nyc": "14.0.0",
+    "supertest": "4.0.2",
+    "plato": "1.7.0"
+  },
+  "nyc": {
+    "require": [
+      "@babel/register"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  }
+}

@@ -1,0 +1,8 @@
+spring.cloud.config.name: sample-config-server
+
+app:
+  base_path: /api/v1/saloon-management
+db:
+  uri: mongodb+srv://tharunrao63:Muthu@777@cluster0.etgb1.mongodb.net/saloonManagement?retryWrites=true&w=majority
+
+
