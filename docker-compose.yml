@@ -23,6 +23,8 @@ services:
       - mongodb
     stdin_open: true
     tty: true
+    environment:
+      PORT: 3004
 
   test-app:
     build: .
