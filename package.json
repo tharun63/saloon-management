@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Chase Survey Service APIS",
    "type": "module",
-  "main": "src/bin/www.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node ./src/bin/www",
     "code_coverage": "cross-env NODE_ENV=test nyc --reporter=html mocha --recursive --exit",
