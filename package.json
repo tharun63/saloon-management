@@ -4,6 +4,7 @@
   "description": "Chase Survey Service APIS",
   "main": "src/server.js",
   "scripts": {
+    "start": "node .src/bin/www",
     "code_coverage": "cross-env NODE_ENV=test nyc --reporter=html mocha --recursive --exit",
     "code_quality": "plato -r -d reports/plato ./src",
     "start-dev": "nodemon --exec babel-node ./src/bin/www",
