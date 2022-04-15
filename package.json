@@ -2,6 +2,7 @@
   "name": "survey_service_apis",
   "version": "1.0.0",
   "description": "Chase Survey Service APIS",
+  "type":"module",
   "main": "src/server.js",
   "scripts": {
     "start": "node ./bin/www",
