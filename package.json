@@ -4,12 +4,12 @@
   "description": "Chase Survey Service APIS",
   "main": "src/server.js",
   "scripts": {
-    "start": "node ./dist/bin/www",
+    "start": "node ./bin/www",
     "code_coverage": "cross-env NODE_ENV=test nyc --reporter=html mocha --recursive --exit",
     "code_quality": "plato -r -d reports/plato ./src",
     "start-dev": "nodemon --exec babel-node ./src/bin/www",
     "build": "babel ./src --out-dir dist",
-    "start-prod": "node ./dist/bin/www"
+    "start-prod": "node ./bin/www"
   },
   "author": "wavelabs",
   "license": "ISC",
