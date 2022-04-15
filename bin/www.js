@@ -1,5 +1,5 @@
 #!/usr/bin/env ./node_modules/.bin/babel-node
-var app=  require('../src/server');
+import app from '../src/server';
 //import {} from 'dotenv/config'
 const PORT = 3009
 const port=process.env.PORT || 3009;
