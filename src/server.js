@@ -6,7 +6,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import morgan from "morgan";
 import swaggerUi from "swagger-ui-express";
-require('./config/config.init');
+//require('./config/config.init');
 import { Config } from 'spring-cloud-config';
 import swaggerSpec from "./config/swagger";
 
